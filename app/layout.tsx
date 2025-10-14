@@ -26,7 +26,7 @@ const Nav = () => (
             alt="Lizard Kingz"
             width={400}
             height={120}
-            className="h-10 sm:h-12 md:h-14 lg:h-16 xl:h-20 w-auto py-1 transition-all duration-300"
+            className="h-6 sm:h-8 md:h-10 lg:h-12 xl:h-14 w-auto py-1 transition-all duration-300"
             priority
           />
           <span className="sr-only">Lizard Kingz</span>

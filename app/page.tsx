@@ -11,7 +11,7 @@ export default function HomePage() {
           autoPlay
           muted
           playsInline
-          poster="/img/perilous-logo.png"
+          poster=""
           controls={false}
         />
         <div className="absolute top-4 left-4 bg-black/50 px-3 py-1 rounded-full text-sm border border-white/10">Perilous — Trailer</div>
@@ -29,7 +29,7 @@ export default function HomePage() {
             title: 'Talent',
             href: '/talent',
             blurb: 'Discover the Mentors',
-            description: 'The pros behind the wheel: Mentors, stunt drivers, and off-road veterans to coach the contestants.'
+            description: 'The pros behind the wheel: Stunt drivers and off-road veterans to coach the contestants.'
           },
           {
             title: 'Creators',
