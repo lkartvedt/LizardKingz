@@ -18,7 +18,7 @@ export default function PerilousPage() {
     <article className="space-y-8">
       <header className="flex flex-col md:flex-row items-center gap-6">
         <Image
-          src="/img/perilous-logo.png"
+          src="/img/perilous_logo.png"
           alt="Perilous logo"
           width={300}
           height={300}
@@ -80,7 +80,7 @@ export default function PerilousPage() {
             title: 'Talent',
             href: '/talent',
             blurb: 'Discover the Mentors',
-            description: 'The pros behind the wheel: Mentors, stunt drivers, and off-road veterans to coach the contestants.'
+            description: 'The pros behind the wheel: Stunt drivers and off-road veterans to coach the contestants.'
           },
           {
             title: 'Creators',
