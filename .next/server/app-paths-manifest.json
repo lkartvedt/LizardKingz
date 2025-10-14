@@ -1,9 +1,0 @@
-{
-  "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js",
-  "/perilous/page": "app/perilous/page.js",
-  "/talent/page": "app/talent/page.js",
-  "/celebrity-contestants/page": "app/celebrity-contestants/page.js",
-  "/creators/page": "app/creators/page.js",
-  "/contact/page": "app/contact/page.js"
-}
