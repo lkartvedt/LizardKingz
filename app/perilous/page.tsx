@@ -2,36 +2,40 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const gallery = [
-  "https://lizardkingz-assets.blob.vercel-storage.com/1.png",
-  "https://lizardkingz-assets.blob.vercel-storage.com/2.png",
-  "https://lizardkingz-assets.blob.vercel-storage.com/3.png",
-  "https://lizardkingz-assets.blob.vercel-storage.com/4.png",
-  "https://lizardkingz-assets.blob.vercel-storage.com/5.png",
-  "https://lizardkingz-assets.blob.vercel-storage.com/6.png",
-  "https://lizardkingz-assets.blob.vercel-storage.com/7.png",
-  "https://lizardkingz-assets.blob.vercel-storage.com/8.png",
-  "https://lizardkingz-assets.blob.vercel-storage.com/9.png",
+  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/1.png",
+  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/2.png",
+  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/3.png",
+  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/4.png",
+  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/5.png",
+  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/6.png",
+  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/7.png",
+  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/8.png",
+  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/9.png"
 ]
-
 
 export default function PerilousPage() {
   return (
     <article className="space-y-8">
-      <header className="flex items-center gap-6">
+      <header className="flex flex-col md:flex-row items-center gap-6">
         <Image
           src="/img/perilous-logo.png"
           alt="Perilous logo"
-          width={140}
-          height={140}
-          className="rounded-xl bg-white/5 p-2"
+          width={300}
+          height={300}
+          className="w-48 md:w-72 h-auto"
+          priority
         />
         <div>
-          <h1>Perilous</h1>
-          <p className="text-white/80 max-w-2xl mt-2">
-            Follow celebrity contestants as they take on the desert in <b>Cabo San Lucas, Baja California</b> with
-            guidance from elite mentors. Filming begins in <b>2026</b>.
+          <p className="text-white/100 max-w-2xl mt-2">
+            <b>
+              Twelve celebrities compete to race the legendary Baja 1000, facing each other and the world’s best in a historic, first-of-its-kind TV finale.
+            </b>
           </p>
-          <div className="mt-3 flex gap-3 text-sm">
+          <p className="text-white/80 max-w-2xl mt-2">
+            Follow celebrity contestants as they take on the deserts of Cabo San Lucas with
+            guidance from elite mentors. Filming begins in 2026.
+          </p>
+          <div className="mt-3 flex gap-3 text-sm flex-wrap">
             <a
               className="btn"
               href="https://www.imdb.com/title/tt33050046/"
@@ -41,13 +45,14 @@ export default function PerilousPage() {
               IMDB
             </a>
             <Link className="btn" href="/celebrity-contestants">
-              Meet the 2026 Celebrity Contestants
+              Meet the Baja Celebrity Contestants
             </Link>
           </div>
         </div>
       </header>
 
-      <section className="space-y-3">
+
+      <section className="space-y-5">
         <h2>Gallery</h2>
         <div className="grid md:grid-cols-3 gap-4">
           {gallery.map((src, i) => (
@@ -101,7 +106,6 @@ export default function PerilousPage() {
           </div>
         ))}
       </section>
-
 
     </article>
   )
