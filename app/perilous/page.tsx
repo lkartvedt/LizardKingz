@@ -2,10 +2,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const gallery = [
-  "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1508780709619-79562169bc64?q=80&w=1600&auto=format&fit=crop"
+  "https://lizardkingz-assets.blob.vercel-storage.com/1.png",
+  "https://lizardkingz-assets.blob.vercel-storage.com/2.png",
+  "https://lizardkingz-assets.blob.vercel-storage.com/3.png",
+  "https://lizardkingz-assets.blob.vercel-storage.com/4.png",
+  "https://lizardkingz-assets.blob.vercel-storage.com/5.png",
+  "https://lizardkingz-assets.blob.vercel-storage.com/6.png",
+  "https://lizardkingz-assets.blob.vercel-storage.com/7.png",
+  "https://lizardkingz-assets.blob.vercel-storage.com/8.png",
+  "https://lizardkingz-assets.blob.vercel-storage.com/9.png",
 ]
+
 
 export default function PerilousPage() {
   return (
