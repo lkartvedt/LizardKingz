@@ -1,14 +1,26 @@
 [
   {
-    "name": "Mikal",
-    "title": "Executive Producer",
+    "name": "Mikal Kartvedt",
+    "title": "Stunt Coordinator?",
     "bio": "Founder of Lizard Kingz LLC.",
-    "image": "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?q=80&w=800&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop"
   },
   {
-    "name": "TBD Teammate",
-    "title": "Director",
-    "bio": "Story + action capture.",
+    "name": "Ellen Something",
+    "title": "Weebles wobble",
+    "bio": "but they don't fall down",
+    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "name": "John Deer",
+    "title": "Blah",
+    "bio": "La dee dah.",
+    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "name": "Jane Doe",
+    "title": "Bloop",
+    "bio": "Sneep Snoop.",
     "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop"
   }
 ]

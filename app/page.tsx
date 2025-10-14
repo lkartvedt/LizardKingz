@@ -28,7 +28,7 @@ export default function HomePage() {
           {
             title: 'Talent',
             href: '/talent',
-            blurb: 'Discover the mentors',
+            blurb: 'Discover the Mentors',
             description: 'The pros behind the wheel: Mentors, stunt drivers, and off-road veterans to coach the contestants.'
           },
           {

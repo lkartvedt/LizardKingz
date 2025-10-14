@@ -51,7 +51,6 @@ export default function PerilousPage() {
         </div>
       </header>
 
-
       <section className="space-y-5">
         <h2>Gallery</h2>
         <div className="grid md:grid-cols-3 gap-4">
@@ -68,6 +67,7 @@ export default function PerilousPage() {
           ))}
         </div>
       </section>
+
       <section className="grid md:grid-cols-3 gap-6 items-stretch">
         {[
           {
@@ -79,7 +79,7 @@ export default function PerilousPage() {
           {
             title: 'Talent',
             href: '/talent',
-            blurb: 'Discover the mentors',
+            blurb: 'Discover the Mentors',
             description: 'The pros behind the wheel: Mentors, stunt drivers, and off-road veterans to coach the contestants.'
           },
           {
