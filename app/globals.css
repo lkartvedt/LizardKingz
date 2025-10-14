@@ -13,5 +13,5 @@ h2 { @apply text-2xl md:text-3xl font-semibold; }
 h3 { @apply text-xl font-semibold; }
 a { @apply underline underline-offset-2 decoration-brand/60 hover:decoration-brand; }
 input, textarea, select { @apply bg-white/10 border border-white/10 rounded-xl px-3 py-2 outline-none focus:border-brand/60; }
-.avatar { @apply w-28 h-28 rounded-full object-cover ring-2 ring-white/20; }
+.avatar { @apply w-36 h-36 rounded-full object-cover ring-2 ring-white/20; }
 .grid-cards { @apply grid sm:grid-cols-2 lg:grid-cols-3 gap-6; }
