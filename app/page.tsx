@@ -17,22 +17,47 @@ export default function HomePage() {
         <div className="absolute top-4 left-4 bg-black/50 px-3 py-1 rounded-full text-sm border border-white/10">Perilous — Trailer</div>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6">
+      <section className="grid md:grid-cols-3 gap-6 items-stretch">
         {[
-          { title: 'Perilous', href: '/perilous', blurb: 'Show details, location, timeline, and promos.' },
-          { title: 'Celebrity Contestants', href: '/celebrity-contestants', blurb: 'The 2026 roster (teaser).' },
-          { title: 'Creators', href: '/creators', blurb: 'The Lizard Kingz team.' }
-        ].map((c) => (
-          <div className="card" key={c.title}>
-            <h3 className="text-xl font-semibold">{c.title}</h3>
-            <p className="text-white/80 mt-2">{c.blurb}</p>
-            <a className="btn mt-4" href={c.href}>Open</a>
+          {
+            title: 'Celebrity Contestants',
+            href: '/celebrity-contestants',
+            blurb: 'Get to know the Roster',
+            description: 'Meet the stars brave enough to take on the desert.'
+          },
+          {
+            title: 'Talent',
+            href: '/talent',
+            blurb: 'Discover the mentors',
+            description: 'The pros behind the wheel: Mentors, stunt drivers, and off-road veterans to coach the contestants.'
+          },
+          {
+            title: 'Creators',
+            href: '/creators',
+            blurb: 'Meet the Lizard Kingz',
+            description: 'Get to know the visionary team behind Perilous.'
+          }
+        ].map(card => (
+          <div
+            key={card.title}
+            className="card h-full flex flex-col text-center px-6 pt-6 pb-3 min-h-[320px] md:min-h-[220px]"
+          >
+            {/* grows to fill available vertical space */}
+            <div className="flex-1 flex flex-col items-center">
+              <h3 className="text-xl font-semibold mb-2">{card.blurb}</h3>
+              <p className="text-white/70 max-w-xs">{card.description}</p>
+            </div>
+
+            {/* pinned near the bottom */}
+            <a className="btn-orange mt-auto self-center" href={card.href}>
+              {card.title}
+            </a>
           </div>
         ))}
-      </div>
+      </section>
 
       <div className="space-y-4">
-        <h2 className="text-brand">Upcoming Promotional Events</h2>
+        <h2 className="text-brand">Upcoming Events</h2>
         <div className="grid-cards">
           {events.map((ev) => (
             <div className="card" key={ev.title}>
