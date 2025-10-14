@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const Nav = () => (
   <header className="border-b border-white/10 sticky top-0 z-50 backdrop-blur bg-black/30">
     <nav className="container py-4 flex items-center gap-6">
-      <Link className="font-bold text-xl no-underline" href="/">🦎 Lizard Kingz</Link>
+      <Link className="font-bold text-xl no-underline" href="/">Lizard Kingz</Link>
       <div className="flex gap-5 text-sm">
         <Link href="/perilous" className="no-underline">Perilous</Link>
         <Link href="/celebrity-contestants" className="no-underline">Celebrity Contestants</Link>
@@ -38,9 +38,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div>© {new Date().getFullYear()} Lizard Kings LLC</div>
             <div className="flex-1" />
             <div className="flex gap-4">
-              <a href="#" aria-label="YouTube">YouTube</a>
               <a href="#" aria-label="Instagram">Instagram</a>
-              <a href="#" aria-label="TikTok">TikTok</a>
+              <a href="#" aria-label="IMDB">IMDB</a>
             </div>
           </div>
         </footer>
