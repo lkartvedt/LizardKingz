@@ -1,26 +1,30 @@
 [
   {
     "name": "Mikal Kartvedt",
-    "title": "Stunt Coordinator?",
+    "title": "Creator & Producer",
     "bio": "Founder of Lizard Kingz LLC.",
-    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?q=80&w=800&auto=format&fit=crop",
+    "email": "mikal@lizardkingz.com"
   },
   {
-    "name": "Ellen Something",
-    "title": "Weebles wobble",
-    "bio": "but they don't fall down",
-    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop"
+    "name": "Matthew Tompkins",
+    "title": "Executive Producer",
+    "bio": "Bio coming soon.",
+    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop",
+    "email": "matthew@lizardkingz.com"
   },
   {
-    "name": "John Deer",
-    "title": "Blah",
-    "bio": "La dee dah.",
-    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop"
+    "name": "Debra Sugarman",
+    "title": "Producer",
+    "bio": "Bio coming soon.",
+    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop",
+    "email": "sugie@lizardkingz.com"
   },
   {
-    "name": "Jane Doe",
-    "title": "Bloop",
-    "bio": "Sneep Snoop.",
-    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop"
+    "name": "Fourth?",
+    "title": "blah balh",
+    "bio": "Bio coming soon.",
+    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop",
+    "email": "someone@lizardkingz.com"
   }
 ]
