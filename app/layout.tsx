@@ -22,7 +22,7 @@ const Nav = () => (
           className="no-underline flex items-center"
         >
           <Image
-            src="/img/lizard_kingz_logo_text_dark.PNG"
+            src="/img/lizard_kingz_logo_text_dark.png"
             alt="Lizard Kingz"
             width={400}
             height={120}
