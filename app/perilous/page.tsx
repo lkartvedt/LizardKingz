@@ -1,40 +1,47 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import NavCardGrid from '@/components/NavCardGrid'
+import { navCards } from '@/data/navCards'
 
 const gallery = [
-  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/1.png",
-  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/2.png",
-  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/3.png",
-  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/4.png",
-  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/5.png",
-  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/6.png",
-  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/7.png",
-  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/8.png",
-  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/9.png"
+  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Gallery/1.png",
+  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Gallery/2.png",
+  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Gallery/3.png",
+  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Gallery/4.png",
+  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Gallery/5.png",
+  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Gallery/6.png",
+  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Gallery/7.png",
+  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Gallery/8.png",
+  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Gallery/9.png"
 ]
 
 export default function PerilousPage() {
   return (
-    <article className="space-y-8">
-      <header className="flex flex-col md:flex-row items-center gap-6">
+    <article className="space-y-6 md:space-y-10">
+      {/* Header */}
+      <header className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
         <Image
           src="/img/perilous_logo.png"
           alt="Perilous logo"
-          width={300}
-          height={300}
-          className="w-48 md:w-72 h-auto"
+          width={500}
+          height={500}
+          className="w-64 md:w-96 h-auto"
           priority
         />
-        <div>
+
+
+        <div className="flex-1">
           <p className="text-white/100 max-w-2xl mt-2">
             <b>
-              Twelve celebrities compete to race the legendary Baja 1000, facing each other and the world’s best in a historic, first-of-its-kind TV finale.
+              Twelve celebrities compete to race the legendary Baja 1000, facing
+              each other and the world’s best in a historic, first-of-its-kind TV finale.
             </b>
           </p>
           <p className="text-white/80 max-w-2xl mt-2">
-            Follow celebrity contestants as they take on the deserts of Cabo San Lucas with
-            guidance from elite mentors. Filming begins in 2026.
+            Follow celebrity contestants as they take on the deserts of Cabo San
+            Lucas with guidance from elite mentors. Filming begins in 2026.
           </p>
+
           <div className="mt-3 flex gap-3 text-sm flex-wrap">
             <a
               className="btn"
@@ -48,10 +55,40 @@ export default function PerilousPage() {
               Meet the Baja Celebrity Contestants
             </Link>
           </div>
+
+          {/* Hosted by now lives inside the header */}
+          <div className="mt-8 flex items-center justify-end gap-6">
+            <div className="text-right max-w-lg">
+              <h2 className="text-2xl font-semibold text-white/90 tracking-wide">
+                Hosted By
+              </h2>
+              <h3 className="text-xl font-semibold text-white mt-1">Rat Sult</h3>
+              <p className="text-white/70 mt-2">
+                Veteran off-road announcer, racer, and media personality, Rat Sult
+                brings the heart of the desert to every broadcast—guiding viewers
+                through the grit, speed, and spirit of <i>Perilous</i>.
+              </p>
+            </div>
+
+            <Image
+              src="https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Other/rat_sult.png"
+              alt="Rat Sult"
+              width={200}
+              height={200}
+              className="rounded-full border border-white/20 shadow-lg flex-shrink-0"
+            />
+          </div>
         </div>
       </header>
 
-      <section className="space-y-5">
+
+      {/* Meet the Cast/Crew NavCards Section */}
+      <section className="pt-2">
+        <NavCardGrid items={navCards} />
+      </section>
+
+      {/* Photo Gallery Section */}
+      <section className="space-y-5 pt-4">
         <h2>Gallery</h2>
         <div className="grid md:grid-cols-3 gap-4">
           {gallery.map((src, i) => (
@@ -67,46 +104,7 @@ export default function PerilousPage() {
           ))}
         </div>
       </section>
-
-      <section className="grid md:grid-cols-3 gap-6 items-stretch">
-        {[
-          {
-            title: 'Celebrity Contestants',
-            href: '/celebrity-contestants',
-            blurb: 'Get to know the Roster',
-            description: 'Meet the stars brave enough to take on the desert.'
-          },
-          {
-            title: 'Talent',
-            href: '/talent',
-            blurb: 'Discover the Mentors',
-            description: 'The pros behind the wheel: Stunt drivers and off-road veterans to coach the contestants.'
-          },
-          {
-            title: 'Creators',
-            href: '/creators',
-            blurb: 'Meet the Lizard Kingz',
-            description: 'Get to know the visionary team behind Perilous.'
-          }
-        ].map(card => (
-          <div
-            key={card.title}
-            className="card h-full flex flex-col text-center px-6 pt-6 pb-3 min-h-[320px] md:min-h-[220px]"
-          >
-            {/* grows to fill available vertical space */}
-            <div className="flex-1 flex flex-col items-center">
-              <h3 className="text-xl font-semibold mb-2">{card.blurb}</h3>
-              <p className="text-white/70 max-w-xs">{card.description}</p>
-            </div>
-
-            {/* pinned near the bottom */}
-            <a className="btn-orange mt-auto self-center" href={card.href}>
-              {card.title}
-            </a>
-          </div>
-        ))}
-      </section>
-
     </article>
   )
 }
+

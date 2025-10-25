@@ -1,14 +1,38 @@
 [
   {
-    "name": "TBD Mentor 1",
-    "title": "Stunt Driver",
-    "bio": "Rally and Baja veteran.",
-    "image": "https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=800&auto=format&fit=crop"
+    "name": "Curt LeDuc",
+    "title": "Mentor",
+    "bio": "LeDuc is a SCORE racing veteran and Off-Road Motorsports Hall of Fame inductee who turned a 1970s Jeep-fab shop into a three decade racing career. From early wins in 4x4 Cherokees to a breakthrough SCORE Baja 500 victory and the 1997 Trophy Truck championship, LeDuc brings hard earned speed, grit, and fabrication know-how to Perilous.",
+    "image": "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Talent/curt_leduc.png"
   },
   {
-    "name": "TBD Mentor 2",
-    "title": "Mechanic Lead",
-    "bio": "Chassis and suspension specialist.",
-    "image": "https://images.unsplash.com/photo-1558898479-33c0057a5d12?q=80&w=800&auto=format&fit=crop"
+    "name": "Ricky Johnson",
+    "title": "Mentor",
+    "bio": "A nine-time AMA motocross/supercross champion turned truck and short-course off-road ace, Johnson captured the PRO 2WD title in the 2010 TORC series and the PRO 4WD crown in 2011-12. With decades of high-pressure racing and training under his belt, Johnson brings elite discipline and off-road smarts to Perilous.",
+    "image": "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Talent/ricky_johnson.png"
+  },
+  {
+    "name": "Mark Post",
+    "title": "Mentor",
+    "bio": "Las Vegas racing veteran and SCORE standout Mark Post has conquered the desert’s toughest courses, including an overall win at the 2007 SCORE Baja 1000. Known for precision and endurance, he’s earned multiple podiums at the Baja 500 and 1000, bringing deep tactical insight and desert discipline to Perilous as a mentor.",
+    "image": "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Talent/mark_post.png"
+  },
+  {
+    "name": "Sara Price",
+    "title": "Guest Driver",
+    "bio": "Price is an off-road racing icon whose career spans motocross, X Games, UTVs, trophy trucks and rally raid. She began riding dirt bikes at eight, accumulated 19 amateur titles, medaled at the X Games, and in 2019 became the first woman to win the SCORE Trophy Truck Spec Championship. In 2024 she made history as the first American female driver to win a stage at the Dakar Rally. ",
+    "image": "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Talent/sara_price.png"
+  },
+  {
+    "name": "Eva Star",
+    "title": "Guest Driver",
+    "bio": "Eighteen-year-old Star began desert racing at an early age and says driving is the one place she finds total focus. After debuting in 2018, she’s already placed 2nd place in PRO UTV NA at the 2025 Baja 400, 3rd at the 2025 Baja 500, and earned Rookie of the Year honors at the 2024 SCORE International. She represents the next generation of off-road talent.",
+    "image": "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Talent/eva_star.png"
+  },
+  {
+    "name": "Kristen Matlock",
+    "title": "Guest Driver",
+    "bio": "A trailblazer in desert racing, this California competitor has dominated the Pro UTV Normally Aspirated division. Matlock won the class championship in the legendary SCORE Baja 1000, following multiple class titles and podiums at the Baja 500. Her Overall UTV Category victory serves as a testament to her skill in navigating Baja's unforgiving terrain.",
+    "image": "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Talent/kristen_matlock.png"
   }
 ]
