@@ -1,18 +1,58 @@
 export default function ContactPage() {
   return (
-    <section className="space-y-6">
-      <h1>Contact</h1>
-      <p className="text-white/80">Get in touch with the Lizard Kingz team.</p>
-      <form className="card space-y-4" action="mailto:mikal@lizardkingz.com" method="POST" encType="text/plain">
-        <div className="grid md:grid-cols-2 gap-4">
-          <input required name="name" placeholder="Your name" />
-          <input required type="email" name="email" placeholder="Your email" />
-        </div>
-        <input name="subject" placeholder="Subject" />
-        <textarea required name="message" placeholder="Message" className="min-h-[120px]" />
-        <button className="btn btn-primary" type="submit">Send Email</button>
-      </form>
-      <p className="text-xs text-white/50">This uses a <code>mailto:</code> action which opens the user’s email client. For server-side sending, wire a provider via a Vercel Route Handler.</p>
+    <section className="container py-10">
+      <div className="mx-auto max-w-2xl space-y-6 text-center">
+        <h1>Contact</h1>
+        <p className="text-white/80">Get in touch with the Lizard Kingz team.</p>
+
+        {/* FormSubmit contact form */}
+        <form
+          // action="https://formsubmit.co/mikal@lizardkingz.com"
+          action="https://formsubmit.co/lindseykartvedt@gmail.com"
+          method="POST"
+          className="card space-y-4 text-left"
+        >
+          <div className="grid md:grid-cols-2 gap-4">
+            <input
+              required
+              name="name"
+              placeholder="Your name"
+              className="w-full"
+            />
+            <input
+              required
+              type="email"
+              name="email"
+              placeholder="Your email"
+              className="w-full"
+            />
+          </div>
+
+          <input name="subject" placeholder="Subject" className="w-full" />
+          <textarea
+            required
+            name="message"
+            placeholder="Message"
+            className="w-full min-h-[140px]"
+          />
+
+          {/* You can customize these hidden fields */}
+          <input type="hidden" name="_captcha" value="false" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://lizardkingz.vercel.app/thank-you"
+          />
+
+          <button type="submit" className="btn btn-primary w-full">
+            Send Email
+          </button>
+        </form>
+
+        <p className="text-xs text-white/50">
+          This form securely sends your message to <b>mikal@lizardkingz.com</b> via FormSubmit.
+        </p>
+      </div>
     </section>
   )
 }

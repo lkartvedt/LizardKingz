@@ -25,8 +25,7 @@ export default function PeopleGrid({
                 <div className="text-white/70">{p.title}</div>
               </div>
             </div>
-
-            <p className="text-white/80 mt-3">{p.bio}</p>
+            <p className="text-sm text-white/80 mt-3 text-left">{p.bio}</p>
           </div>
 
           {/* Bottom: email link */}
