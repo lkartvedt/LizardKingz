@@ -71,7 +71,7 @@ export default function PerilousPage() {
             </div>
 
             <Image
-              src="https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Other/rat_sult.png"
+              src="https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Talent/rat_sult.png"
               alt="Rat Sult"
               width={200}
               height={200}
