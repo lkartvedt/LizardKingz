@@ -2,29 +2,22 @@
   {
     "name": "Mikal Kartvedt",
     "title": "Creator & Producer",
-    "bio": "Founder of Lizard Kingz LLC.",
-    "image": "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?q=80&w=800&auto=format&fit=crop",
-    "email": "mikal@lizardkingz.com"
+    "image": "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Creators/mikal_kartvedt.png",
+    "email": "mikal@lizardkingz.com",
+    "imdb": "https://www.imdb.com/name/nm0440257/"
   },
   {
     "name": "Matthew Tompkins",
     "title": "Executive Producer",
-    "bio": "Bio coming soon.",
-    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop",
-    "email": "matthew@lizardkingz.com"
+    "image": "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Creators/matthew_tompkins.png",
+    "email": "matthew@lizardkingz.com",
+    "imdb": "https://www.imdb.com/name/nm0867004/"
   },
   {
     "name": "Debra Sugarman",
     "title": "Producer",
-    "bio": "Bio coming soon.",
-    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop",
-    "email": "sugie@lizardkingz.com"
-  },
-  {
-    "name": "Fourth?",
-    "title": "blah balh",
-    "bio": "Bio coming soon.",
-    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop",
-    "email": "someone@lizardkingz.com"
+    "image": "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Creators/debra_sugarman.png",
+    "email": "sugie@lizardkingz.com",
+    "imdb": "https://www.imdb.com/name/nm0837398/"
   }
 ]

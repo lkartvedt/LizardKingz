@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import creators from '@/data/creators.json'
-import PeopleGrid from '@/components/PeopleGrid'
+import PeopleGrid from '@/components/PeopleGrid_Square'
 
 export default function CreatorsPage() {
   return (
@@ -24,11 +24,10 @@ export default function CreatorsPage() {
         </p>
       </div>
 
-      {/* People grid (2-column centered layout) */}
-      <div className="mx-auto max-w-3xl">
-        <PeopleGrid people={creators as any} columns={2} />
+      {/* People grid (3-column layout) */}
+      <div className="mx-auto max-w-6xl">
+        <PeopleGrid people={creators as any} columns={3} />
       </div>
     </section>
   )
 }
-
