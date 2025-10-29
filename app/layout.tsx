@@ -94,14 +94,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="container py-10">{children}</main>
         <footer className="border-t border-white/10 mt-10">
           <div className="container py-8 text-sm flex flex-col md:flex-row gap-4 md:items-center">
-            <div>© {new Date().getFullYear()} Lizard Kings LLC</div>
+            <div>© {new Date().getFullYear()} Lizard Kingz LLC</div>
             <div className="flex-1" />
             <div className="flex gap-4">
-              <a href="#" aria-label="Instagram">Instagram</a>
-              <a href="#" aria-label="IMDB">IMDB</a>
+              <a
+                href="https://www.instagram.com/perilousbaja/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://www.imdb.com/title/tt33050046/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="IMDB"
+              >
+                IMDB
+              </a>
             </div>
           </div>
         </footer>
+
         <Analytics />
       </body>
     </html>
