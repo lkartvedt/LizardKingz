@@ -51,39 +51,6 @@ const Nav = () => (
         <Link href="/shop" className="btn btn-primary no-underline">Shop</Link>
       </nav>
     </header>
-
-
-  // <header className="border-b border-white/10 sticky top-0 z-50 backdrop-blur bg-black/30">
-  //   <nav className="container py-4 flex items-center gap-6">
-
-  //     <Link
-  //       href="/"
-  //       aria-label="Lizard Kingz — Home"
-  //       className="no-underline flex justify-center items-center w-full"
-  //     >
-  //       <Image
-  //         src="/img/lizard_kingz_logo_text_dark.PNG"
-  //         alt="Lizard Kingz"
-  //         width={400}
-  //         height={120}
-  //         className="w-32 sm:w-44 md:w-56 lg:w-12 xl:w-72 h-auto py-2 transition-all duration-300"
-  //         priority
-  //       />
-  //       <span className="sr-only">Lizard Kingz</span>
-  //     </Link>
-
-
-  //     <div className="flex gap-5 text-sm">
-  //       <Link href="/perilous" className="no-underline">Perilous</Link>
-  //       <Link href="/celebrity-contestants" className="no-underline">Celebrity Contestants</Link>
-  //       <Link href="/talent" className="no-underline">Talent</Link>
-  //       <Link href="/creators" className="no-underline">Creators</Link>
-  //       <Link href="/contact" className="no-underline">Contact</Link>
-  //     </div>
-  //     <div className="flex-1" />
-  //     <Link href="/shop" className="btn btn-primary no-underline">Shop</Link>
-  //   </nav>
-  // </header>
 )
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
