@@ -2,20 +2,23 @@ import Image from 'next/image'
 import Link from 'next/link'
 import NavCardGrid from '@/components/NavCardGrid'
 import { navCards } from '@/data/navCards'
+import CarouselRow from '@/components/CarouselRow'
+import { list } from '@vercel/blob'
 
-const gallery = [
-  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Gallery/1.png",
-  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Gallery/2.png",
-  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Gallery/3.png",
-  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Gallery/4.png",
-  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Gallery/5.png",
-  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Gallery/6.png",
-  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Gallery/7.png",
-  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Gallery/8.png",
-  "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Gallery/9.png"
-]
+// Revalidate periodically so new uploads appear automatically
+export const revalidate = 60
 
-export default function PerilousPage() {
+export default async function PerilousPage() {
+  // Dynamically fetch all images in your Gallery folder
+  const { blobs } = await list({ prefix: 'Gallery/' })
+
+  const gallery = blobs
+    .filter(b => /\.(png|jpe?g|webp|avif)$/i.test(b.pathname))
+    .sort((a, b) =>
+      a.pathname.localeCompare(b.pathname, undefined, { numeric: true, sensitivity: 'base' })
+    )
+    .map(b => b.url)
+
   return (
     <article className="space-y-6 md:space-y-10">
       {/* Header */}
@@ -28,7 +31,6 @@ export default function PerilousPage() {
           className="w-64 md:w-96 h-auto"
           priority
         />
-
 
         <div className="flex-1">
           <p className="text-white/100 max-w-2xl mt-2">
@@ -56,7 +58,7 @@ export default function PerilousPage() {
             </Link>
           </div>
 
-          {/* Hosted by now lives inside the header */}
+          {/* Hosted By */}
           <div className="mt-8 flex items-center justify-end gap-6">
             <div className="text-right max-w-lg">
               <h2 className="text-2xl font-semibold text-white/90 tracking-wide">
@@ -81,7 +83,6 @@ export default function PerilousPage() {
         </div>
       </header>
 
-
       {/* Meet the Cast/Crew NavCards Section */}
       <section className="pt-2">
         <NavCardGrid items={navCards} />
@@ -90,21 +91,8 @@ export default function PerilousPage() {
       {/* Photo Gallery Section */}
       <section className="space-y-5 pt-4">
         <h2>Gallery</h2>
-        <div className="grid md:grid-cols-3 gap-4">
-          {gallery.map((src, i) => (
-            <div key={i} className="card p-2">
-              <Image
-                src={src}
-                alt={`promo-${i}`}
-                width={1200}
-                height={800}
-                className="rounded-xl object-cover"
-              />
-            </div>
-          ))}
-        </div>
+        <CarouselRow images={gallery} />
       </section>
     </article>
   )
 }
-
