@@ -39,16 +39,26 @@ export default function ContactPage() {
 
         <form onSubmit={handleSubmit} className="card space-y-4 text-left">
           <div className="grid md:grid-cols-2 gap-4">
-            <input required name="name" placeholder="Your name" />
-            <input required type="email" name="email" placeholder="Your email" />
+            <input required name="name" placeholder="Your name" className="w-full" />
+            <input required type="email" name="email" placeholder="Your email" className="w-full" />
           </div>
-          <input name="subject" placeholder="Subject" />
-          <textarea required name="message" placeholder="Message" className="min-h-[140px]" />
 
-          <button type="submit" className="btn btn-primary w-full" disabled={loading}>
-            {loading ? 'Sending...' : 'Send Email'}
-          </button>
+          <input name="subject" placeholder="Subject" className="w-full" />
+
+          <textarea
+            required
+            name="message"
+            placeholder="Message"
+            className="w-full h-40 md:h-48 resize-y"
+          />
+
+          <div className="flex justify-center">
+            <button type="submit" className="btn btn-primary" disabled={loading}>
+              {loading ? 'Sending...' : 'Send Email'}
+            </button>
+          </div>
         </form>
+
       </div>
     </section>
   )
