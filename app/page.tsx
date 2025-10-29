@@ -1,30 +1,62 @@
 'use client'
 
 import { useRef, useState } from 'react'
-import Link from 'next/link'
 import events from '@/data/events.json'
 import NavCardGrid from '@/components/NavCardGrid'
 import { navCards } from '@/data/navCards'
 
 export default function HomePage() {
   const videoRef = useRef<HTMLVideoElement>(null)
-  const [showReplay, setShowReplay] = useState(false)
+  // Start as playing, not ended
+  const [paused, setPaused] = useState(false)
+  const [ended, setEnded] = useState(false)
 
-  const handleEnded = () => setShowReplay(true)
-  const handlePlay = () => setShowReplay(false)
+  const play = () => {
+    const v = videoRef.current
+    if (!v) return
+    v.play().catch(() => {}) // ignore autoplay restrictions
+  }
+
+  const pause = () => {
+    const v = videoRef.current
+    if (!v) return
+    v.pause()
+  }
 
   const replay = () => {
     const v = videoRef.current
     if (!v) return
     v.currentTime = 0
-    v.play().catch(() => {}) // ignore autoplay restrictions
+    setEnded(false)
+    play()
+  }
+
+  const handleEnded = () => {
+    setEnded(true)
+    setPaused(true)
+  }
+
+  const handlePlay = () => {
+    setPaused(false)
+    setEnded(false)
+  }
+
+  const handlePause = () => {
+    // Only show overlay when actually paused
+    setPaused(true)
+  }
+
+  // Click video: toggle. If ended, treat click as replay.
+  const handleVideoClick = () => {
+    if (ended) return replay()
+    paused ? play() : pause()
   }
 
   return (
     <section className="space-y-10">
       {/* Trailer */}
       <div className="card overflow-hidden relative">
-        <div className="aspect-[16/9]">
+        <div className="aspect-[16/9] relative">
           <video
             ref={videoRef}
             className="w-full h-full object-cover rounded-2xl"
@@ -36,6 +68,8 @@ export default function HomePage() {
             preload="metadata"
             onEnded={handleEnded}
             onPlay={handlePlay}
+            onPause={handlePause}
+            onClick={handleVideoClick}
           />
         </div>
 
@@ -44,19 +78,20 @@ export default function HomePage() {
           Perilous — Trailer
         </div>
 
-        {/* Replay overlay */}
-        {showReplay && (
+        {/* Center overlay appears ONLY when paused or ended */}
+        {(paused || ended) && (
           <button
-            onClick={replay}
+            onClick={ended ? replay : play}
             className="absolute inset-0 grid place-items-center"
-            aria-label="Replay trailer"
-            title="Replay trailer"
+            aria-label={ended ? 'Replay trailer' : 'Play trailer'}
+            title={ended ? 'Replay trailer' : 'Play trailer'}
           >
             <span className="rounded-full bg-black/60 backdrop-blur px-5 py-3 border border-white/15 flex items-center gap-2 text-white hover:bg-black/70 active:scale-95 transition">
+              {/* Play icon */}
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M8 5v14l11-7z" />
               </svg>
-              Play
+              {ended ? 'Replay' : 'Play'}
             </span>
           </button>
         )}
@@ -65,7 +100,8 @@ export default function HomePage() {
       {/* ✨ Tagline below trailer */}
       <div className="text-center mt-4">
         <p className="text-lg md:text-xl text-white/90 italic tracking-wide">
-          The World-Exclusive Competition Adventure Series Inspired by the <span className="text-brand font-semibold not-italic">BAJA&nbsp;1000</span>
+          The World-Exclusive Competition Adventure Series Inspired by the{' '}
+          <span className="text-brand font-semibold not-italic">BAJA&nbsp;1000</span>
         </p>
       </div>
 
