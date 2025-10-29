@@ -17,12 +17,12 @@ export default function HomePage() {
     const v = videoRef.current
     if (!v) return
     v.currentTime = 0
-    // calling play() returns a promise; ignore rejection for autoplay-restricted browsers
-    v.play().catch(() => {})
+    v.play().catch(() => {}) // ignore autoplay restrictions
   }
 
   return (
     <section className="space-y-10">
+      {/* Trailer */}
       <div className="card overflow-hidden relative">
         <div className="aspect-[16/9]">
           <video
@@ -53,7 +53,6 @@ export default function HomePage() {
             title="Replay trailer"
           >
             <span className="rounded-full bg-black/60 backdrop-blur px-5 py-3 border border-white/15 flex items-center gap-2 text-white hover:bg-black/70 active:scale-95 transition">
-              {/* Play icon */}
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M8 5v14l11-7z" />
               </svg>
@@ -63,11 +62,19 @@ export default function HomePage() {
         )}
       </div>
 
+      {/* ✨ Tagline below trailer */}
+      <div className="text-center mt-4">
+        <p className="text-lg md:text-xl text-white/90 italic tracking-wide">
+          The World-Exclusive Competition Adventure Series Inspired by the <span className="text-brand font-semibold not-italic">BAJA&nbsp;1000</span>
+        </p>
+      </div>
+
       {/* Meet the Cast/Crew NavCards Section */}
       <section className="pt-2">
         <NavCardGrid items={navCards} />
       </section>
 
+      {/* Events Section */}
       <div className="space-y-4">
         <h2 className="text-brand">Upcoming & Recent Events</h2>
         <div className="grid-cards">
