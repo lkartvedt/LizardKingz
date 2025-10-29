@@ -1,57 +1,64 @@
+'use client'
+import { useState } from 'react'
+
 export default function ContactPage() {
+  const [loading, setLoading] = useState(false)
+  const [sent, setSent] = useState(false)
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setLoading(true)
+
+    const formData = new FormData(e.currentTarget)
+    const data = Object.fromEntries(formData.entries())
+
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+
+    setLoading(false)
+    if (res.ok) setSent(true)
+  }
+
+  if (sent) {
+    return (
+      <section className="text-center py-20">
+        <h1 className="text-3xl font-bold mb-4">Thank you!</h1>
+        <p className="text-white/80">Your message has been sent.</p>
+      </section>
+    )
+  }
+
   return (
     <section className="container py-10">
       <div className="mx-auto max-w-2xl space-y-6 text-center">
         <h1>Contact</h1>
         <p className="text-white/80">Get in touch with the Lizard Kingz team.</p>
 
-        {/* FormSubmit contact form */}
-        <form
-          // action="https://formsubmit.co/mikal@lizardkingz.com"
-          action="https://formsubmit.co/lindseykartvedt@gmail.com"
-          method="POST"
-          className="card space-y-4 text-left"
-        >
+        <form onSubmit={handleSubmit} className="card space-y-4 text-left">
           <div className="grid md:grid-cols-2 gap-4">
-            <input
-              required
-              name="name"
-              placeholder="Your name"
-              className="w-full"
-            />
-            <input
-              required
-              type="email"
-              name="email"
-              placeholder="Your email"
-              className="w-full"
-            />
+            <input required name="name" placeholder="Your name" className="w-full" />
+            <input required type="email" name="email" placeholder="Your email" className="w-full" />
           </div>
 
           <input name="subject" placeholder="Subject" className="w-full" />
+
           <textarea
             required
             name="message"
             placeholder="Message"
-            className="w-full min-h-[140px]"
+            className="w-full h-40 md:h-48 resize-y"
           />
 
-          {/* You can customize these hidden fields */}
-          <input type="hidden" name="_captcha" value="false" />
-          <input
-            type="hidden"
-            name="_next"
-            value="https://lizardkingz.vercel.app/thank-you"
-          />
-
-          <button type="submit" className="btn btn-primary w-full">
-            Send Email
-          </button>
+          <div className="flex justify-center">
+            <button type="submit" className="btn btn-primary" disabled={loading}>
+              {loading ? 'Sending...' : 'Send Email'}
+            </button>
+          </div>
         </form>
 
-        <p className="text-xs text-white/50">
-          This form securely sends your message to <b>mikal@lizardkingz.com</b> via FormSubmit.
-        </p>
       </div>
     </section>
   )
