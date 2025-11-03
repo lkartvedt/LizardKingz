@@ -13,8 +13,8 @@ export const navCards: NavCard[] = [
     description: 'Meet the stars brave enough to take on the Baja 1000.',
   },
   {
-    title: 'Racing Talent',
-    href: '/talent',
+    title: 'Racing Legends',
+    href: '/legends',
     blurb: 'The Legends',
     description:
       "Champions mentors and rival guest drivers who get hands-on mentoring their teams.",
