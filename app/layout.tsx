@@ -39,7 +39,7 @@ const Nav = () => (
         <div className="flex items-center gap-5 text-sm">
           <Link href="/perilous" className="no-underline">Perilous</Link>
           <Link href="/celebrity-contestants" className="no-underline">Celebrity Contestants</Link>
-          <Link href="/talent" className="no-underline">Talent</Link>
+          <Link href="/legends" className="no-underline">Legends</Link>
           <Link href="/creators" className="no-underline">Creators</Link>
           <Link href="/contact" className="no-underline">Contact</Link>
         </div>

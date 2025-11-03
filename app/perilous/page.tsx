@@ -28,20 +28,23 @@ export default async function PerilousPage() {
           alt="Perilous logo"
           width={500}
           height={500}
-          className="w-64 md:w-96 h-auto"
+          //className="w-64 md:w-96 h-auto"
+          className="w-72 md:w-[28rem] h-auto"
           priority
         />
 
         <div className="flex-1">
           <p className="text-white/100 max-w-2xl mt-2">
             <b>
-              Twelve celebrities compete to race the legendary Baja 1000, facing
-              each other and the world’s best in a historic, first-of-its-kind TV finale.
+              Twelve celebrities compete to race in the world-famous SCORE BAJA 1000. 
+              The final episode is a historic television first when they face off against each 
+              other and the best in the business, at its most iconic race.
             </b>
           </p>
           <p className="text-white/80 max-w-2xl mt-2">
-            Follow celebrity contestants as they take on the deserts of Cabo San
-            Lucas with guidance from elite mentors. Filming begins in 2026.
+            Follow our celebrity contestants as they take on the deserts of Baja, 
+            from Ensenada to Cabo San Lucas. Training and competing under the guidance of 
+            three off-road legends and a host of elite guest drivers.
           </p>
 
           <div className="mt-3 flex gap-3 text-sm flex-wrap">
@@ -60,14 +63,12 @@ export default async function PerilousPage() {
 
           {/* Hosted By */}
           <div className="mt-8 flex items-center justify-end gap-6">
-            <div className="text-right max-w-lg">
-              <h2 className="text-2xl font-semibold text-white/90 tracking-wide">
-                Hosted By
-              </h2>
+            <div className="text-right flex-1 max-w-none pr-4">
+              <h2 className="text-2xl font-semibold text-white/90 tracking-wide">Hosted By</h2>
               <h3 className="text-xl font-semibold text-white mt-1">Rat Sult</h3>
-              <p className="text-white/70 mt-2">
-                Veteran off-road announcer, racer, and media personality, Rat Sult
-                brings the heart of the desert to every broadcast—guiding viewers
+              <p className="text-white/70 mt-2 max-w-none">
+                Veteran off-road announcer, X Games gold medalist, Trophy Truck racer, and SCORE 
+                personality, Rat Sult brings the heart of the desert to each episode guiding viewers
                 through the grit, speed, and spirit of <i>Perilous</i>.
               </p>
             </div>
