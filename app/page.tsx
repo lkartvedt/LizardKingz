@@ -1,28 +1,39 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import events from '@/data/events.json'
 import NavCardGrid from '@/components/NavCardGrid'
 import { navCards } from '@/data/navCards'
 
 export default function HomePage() {
   const videoRef = useRef<HTMLVideoElement>(null)
-  // Start as playing, not ended
+
   const [paused, setPaused] = useState(false)
   const [ended, setEnded] = useState(false)
+  const [muted, setMuted] = useState(false)            // default: try sound ON
+  const [needsUnmutePrompt, setNeedsUnmutePrompt] = useState(false) // shown only if fallback happens
 
-  const play = () => {
+  // Try autoplay WITH sound, fallback to muted if blocked
+  useEffect(() => {
     const v = videoRef.current
     if (!v) return
-    v.play().catch(() => {}) // ignore autoplay restrictions
-  }
+    v.muted = false
+    v.volume = 1
+    v.play()
+      .then(() => {
+        setMuted(false)
+        setNeedsUnmutePrompt(false)
+      })
+      .catch(() => {
+        v.muted = true
+        setMuted(true)
+        setNeedsUnmutePrompt(true)
+        v.play().catch(() => {})
+      })
+  }, [])
 
-  const pause = () => {
-    const v = videoRef.current
-    if (!v) return
-    v.pause()
-  }
-
+  const play = () => videoRef.current?.play().catch(() => {})
+  const pause = () => videoRef.current?.pause()
   const replay = () => {
     const v = videoRef.current
     if (!v) return
@@ -31,24 +42,33 @@ export default function HomePage() {
     play()
   }
 
-  const handleEnded = () => {
-    setEnded(true)
-    setPaused(true)
+  const handleEnded = () => { setEnded(true); setPaused(true) }
+  const handlePlay = () => { setPaused(false); setEnded(false) }
+  const handlePause = () => setPaused(true)
+
+  const unmuteAndPlay = () => {
+    const v = videoRef.current
+    if (!v) return
+    v.muted = false
+    v.volume = 1
+    setMuted(false)
+    setNeedsUnmutePrompt(false)
+    v.play().catch(() => {})
   }
 
-  const handlePlay = () => {
-    setPaused(false)
-    setEnded(false)
+  const toggleMute = () => {
+    const v = videoRef.current
+    if (!v) return
+    const next = !muted
+    v.muted = next
+    setMuted(next)
+    if (!next) { v.volume = 1; v.play().catch(() => {}) }
   }
 
-  const handlePause = () => {
-    // Only show overlay when actually paused
-    setPaused(true)
-  }
-
-  // Click video: toggle. If ended, treat click as replay.
+  // Click behavior: if ended -> replay; else if muted & showing prompt -> unmute; else toggle pause
   const handleVideoClick = () => {
     if (ended) return replay()
+    if (muted && needsUnmutePrompt) return unmuteAndPlay()
     paused ? play() : pause()
   }
 
@@ -60,9 +80,9 @@ export default function HomePage() {
           <video
             ref={videoRef}
             className="w-full h-full object-cover rounded-2xl"
-            src="https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Trailer/Perilous_Trailer_V1.mov"
+            src="https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Trailer/perilous_trailer_v2.mov"
             autoPlay
-            muted
+            muted={muted}          // controlled: we try sound-on first, fallback sets this true
             playsInline
             controls={false}
             preload="metadata"
@@ -78,8 +98,25 @@ export default function HomePage() {
           Perilous — Trailer
         </div>
 
-        {/* Center overlay appears ONLY when paused or ended */}
-        {(paused || ended) && (
+        {/* First-load fallback: show unmute prompt only if autoplay-with-sound was blocked */}
+        {needsUnmutePrompt && !ended && (
+          <button
+            onClick={unmuteAndPlay}
+            className="absolute inset-0 grid place-items-center"
+            aria-label="Unmute trailer"
+            title="Tap to unmute"
+          >
+            <span className="rounded-full bg-black/60 backdrop-blur px-5 py-3 border border-white/15 flex items-center gap-2 text-white hover:bg-black/70 active:scale-95 transition">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                <path d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a3.5 3.5 0 0 0-2.5-3.34v6.68A3.5 3.5 0 0 0 16.5 12z" />
+              </svg>
+              Tap to unmute
+            </span>
+          </button>
+        )}
+
+        {/* Play / Replay overlay (same as your UX) */}
+        {(paused || ended) && !needsUnmutePrompt && (
           <button
             onClick={ended ? replay : play}
             className="absolute inset-0 grid place-items-center"
@@ -87,7 +124,6 @@ export default function HomePage() {
             title={ended ? 'Replay trailer' : 'Play trailer'}
           >
             <span className="rounded-full bg-black/60 backdrop-blur px-5 py-3 border border-white/15 flex items-center gap-2 text-white hover:bg-black/70 active:scale-95 transition">
-              {/* Play icon */}
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M8 5v14l11-7z" />
               </svg>
@@ -95,9 +131,19 @@ export default function HomePage() {
             </span>
           </button>
         )}
+
+        {/* Bottom-right mute chip */}
+        <button
+          onClick={toggleMute}
+          className="absolute bottom-3 right-3 rounded-full bg-black/60 backdrop-blur px-3 py-1.5 text-xs border border-white/15 text-white hover:bg-black/70 transition"
+          aria-label={muted ? 'Unmute' : 'Mute'}
+          title={muted ? 'Unmute' : 'Mute'}
+        >
+          {muted ? 'Sound Off' : 'Sound On'}
+        </button>
       </div>
 
-      {/* ✨ Tagline below trailer */}
+      {/* Tagline */}
       <div className="text-center mt-4">
         <p className="text-lg md:text-xl text-white/90 italic tracking-wide">
           The World-Exclusive Competition Adventure Series Inspired by the{' '}
@@ -105,12 +151,12 @@ export default function HomePage() {
         </p>
       </div>
 
-      {/* Meet the Cast/Crew NavCards Section */}
+      {/* Meet the Cast/Crew */}
       <section className="pt-2">
         <NavCardGrid items={navCards} />
       </section>
 
-      {/* Events Section */}
+      {/* Events */}
       <div className="space-y-4">
         <h2 className="text-brand">Upcoming & Recent Events</h2>
         <div className="grid-cards">
