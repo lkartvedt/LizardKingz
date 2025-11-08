@@ -1,5 +1,17 @@
 [
   {
+    "name": "Jake Busey",
+    "title": "Actor",
+    "bio": "Busey has built a varied career in film and television with standout roles in movies like Starship Troopers and The Frighteners. Beyond acting, he loves to take on challenges that blend his rugged personality with adrenaline-fuelled adventure. This season, Busey brings his fearless approach to the Baja circuit, ready to tackle whatever the desert throws his way.",
+    "image": "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Celebrity%20Contestants/jake_busey.png"
+  },
+  {
+    "name": "Robert Ri'chard",
+    "title": "Actor / Producer",
+    "bio": "Ri'chard is a Los Angeles-born actor and producer best known for his roles in Coach Carter, House of Wax, and the hit series One on One. He has maintained a versatile Hollywood for 30+ years, but now the then Emmy winner takes his fierce drive from the screen to the desert. Trading scripts for sand, Ri'chard joins Perilous to push his limits behind the wheel.",
+    "image": "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Celebrity%20Contestants/robert_ri_chard.png"
+  },
+  {
     "name": "Cat Zingano",
     "title": "Actress / MMA Fighter",
     "bio": "Zingano rose to prominence as a four-time All-American collegiate wrestler, then transitioned into professional MMA. She competed in the Ultimate Fighting Championship and later in Bellator MMA. Now stepping into the high-stakes world of off-road racing, she brings the same unrelenting spirit that made her a standout in the cage.",
@@ -10,11 +22,5 @@
     "title": "Actor / MMA Fighter",
     "bio": "Cerrone is a legendary name in mixed martial arts, known for his fearless fighting style and record-breaking career in the UFC. He has built a reputation for grit, charisma, and a relentless drive to push limits—on the mat and beyond. Transitioning into acting and now off-road competition, Cerrone is ready to conquer the desert with the same courage that made him a fan favorite in the ring.",
     "image": "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Celebrity%20Contestants/cowboy_cerrone.png"
-  },
-  {
-    "name": "Jake Busey",
-    "title": "Actor",
-    "bio": "Busey has built a varied career in film and television with standout roles in movies like Starship Troopers and The Frighteners. Beyond acting, he loves to take on challenges that blend his rugged personality with adrenaline-fuelled adventure. This season, Busey brings his fearless approach to the Baja circuit, ready to tackle whatever the desert throws his way.",
-    "image": "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Celebrity%20Contestants/jake_busey.png"
   }
 ]

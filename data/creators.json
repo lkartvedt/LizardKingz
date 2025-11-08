@@ -7,17 +7,17 @@
     "imdb": "https://www.imdb.com/name/nm0440257/"
   },
   {
-    "name": "Matthew Tompkins",
-    "title": "Executive Producer",
-    "image": "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Creators/matthew_tompkins.png",
-    "email": "matthew@lizardkingz.com",
-    "imdb": "https://www.imdb.com/name/nm0867004/"
-  },
-  {
     "name": "Debra Sugarman",
     "title": "Producer",
     "image": "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Creators/debra_sugarman_v2.png",
     "email": "sugie@lizardkingz.com",
     "imdb": "https://www.imdb.com/name/nm0837398/"
+  },
+  {
+    "name": "Matthew Tompkins",
+    "title": "Executive Producer",
+    "image": "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Creators/matthew_tompkins.png",
+    "email": "matthew@lizardkingz.com",
+    "imdb": "https://www.imdb.com/name/nm0867004/"
   }
 ]
