@@ -167,9 +167,12 @@ export default function HomePage() {
                 {ev.date} — {ev.location}
               </div>
               <p className="text-white/80 mt-2">{ev.details}</p>
-              <div className="mt-3 text-sm">
-                Merch: <span className="text-brand">{ev.merch}</span>
-              </div>
+
+              {ev.merch && (
+                <div className="mt-3 text-sm">
+                  Merch: <span className="text-brand">{ev.merch}</span>
+                </div>
+              )}
             </div>
           ))}
         </div>
