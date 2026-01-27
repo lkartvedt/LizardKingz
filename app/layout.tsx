@@ -23,7 +23,7 @@ const Nav = () => (
         >
           <Image
             src="/img/lizard_kingz_logo_text_dark.png"
-            alt="Lizard Kingz"
+            alt="" /*Alt text intentionally left blank for ADA compliance*/
             width={400}
             height={120}
             className="h-6 sm:h-8 md:h-10 lg:h-12 xl:h-14 w-auto py-1 transition-all duration-300"
@@ -58,7 +58,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className="dark">
       <body>
         <Nav />
-        <main className="container py-10">{children}</main>
+        <main className="container py-10">
+          <h1 className="sr-only">Lizard Kingz — Perilous</h1>
+          {children}
+        </main>
+
         <footer className="border-t border-white/10 mt-10">
           <div className="container py-8 text-sm flex flex-col md:flex-row gap-4 md:items-center">
             <div>© {new Date().getFullYear()} Lizard Kingz LLC</div>
