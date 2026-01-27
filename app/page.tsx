@@ -74,7 +74,7 @@ export default function HomePage() {
 
   return (
     <section className="space-y-10">
-      {/* Trailer */}
+      {/* Teaser */}
       <div className="card overflow-hidden relative">
         <div className="aspect-[16/9] relative">
           <video
@@ -93,9 +93,9 @@ export default function HomePage() {
           />
         </div>
 
-        {/* Trailer label */}
+        {/* Teaser label */}
         <div className="pointer-events-none absolute top-4 left-4 bg-black/50 px-3 py-1 rounded-full text-sm border border-white/10">
-          Perilous — Trailer
+          Perilous — Teaser
         </div>
 
         {/* First-load fallback: show unmute prompt only if autoplay-with-sound was blocked */}
@@ -103,7 +103,7 @@ export default function HomePage() {
           <button
             onClick={unmuteAndPlay}
             className="absolute inset-0 grid place-items-center"
-            aria-label="Unmute trailer"
+            aria-label="Unmute teaser"
             title="Tap to unmute"
           >
             <span className="rounded-full bg-black/60 backdrop-blur px-5 py-3 border border-white/15 flex items-center gap-2 text-white hover:bg-black/70 active:scale-95 transition">
@@ -120,8 +120,8 @@ export default function HomePage() {
           <button
             onClick={ended ? replay : play}
             className="absolute inset-0 grid place-items-center"
-            aria-label={ended ? 'Replay trailer' : 'Play trailer'}
-            title={ended ? 'Replay trailer' : 'Play trailer'}
+            aria-label={ended ? 'Replay teaser' : 'Play teaser'}
+            title={ended ? 'Replay teaser' : 'Play teaser'}
           >
             <span className="rounded-full bg-black/60 backdrop-blur px-5 py-3 border border-white/15 flex items-center gap-2 text-white hover:bg-black/70 active:scale-95 transition">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
