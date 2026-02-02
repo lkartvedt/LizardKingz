@@ -80,7 +80,7 @@ export default function HomePage() {
           <video
             ref={videoRef}
             className="w-full h-full object-cover rounded-2xl"
-            src="https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Teaser/perilous_trailer_v4.mov"
+            src="https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Teaser/perilous_trailer_v5.mov"
             autoPlay
             muted={muted}          // controlled: we try sound-on first, fallback sets this true
             playsInline
@@ -146,8 +146,8 @@ export default function HomePage() {
       {/* Tagline */}
       <div className="text-center mt-4">
         <p className="text-lg md:text-xl text-white/90 italic tracking-wide">
-          The World-Exclusive Competition Adventure Series Inspired by the{' '}
-          <span className="text-brand font-semibold not-italic">BAJA&nbsp;1000</span>
+          The World's First Adventure Series Inside Elite{' '}
+          <span className="text-brand font-semibold not-italic">Off-Road&nbsp;Racing</span>
         </p>
       </div>
 

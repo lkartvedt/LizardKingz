@@ -36,9 +36,9 @@ export default async function PerilousPage() {
         <div className="flex-1">
           <p className="text-white/100 max-w-2xl mt-2">
             <b>
-              Twelve celebrities compete to race in the world-famous SCORE BAJA 1000. 
-              The final episode is a historic television first when they face off against each 
-              other and the best in the business, at its most iconic race.
+              Twelve celebrities train to compete in the world's most famous off-road race.
+              The final episode is a historic television first when they face off against each
+              other and the best in the business, at its most iconic event.
             </b>
           </p>
           <p className="text-white/80 max-w-2xl mt-2">
@@ -67,15 +67,15 @@ export default async function PerilousPage() {
               <h2 className="text-2xl font-semibold text-white/90 tracking-wide">Hosted By</h2>
               <h3 className="text-xl font-semibold text-white mt-1">Rat Sult</h3>
               <p className="text-white/70 mt-2 max-w-none">
-                Veteran off-road announcer, X Games gold medalist, Trophy Truck racer, and SCORE 
-                personality, Rat Sult brings the heart of the desert to each episode guiding viewers
+                Veteran off-road announcer and X Games gold medalist, Rat Sult, 
+                brings the heart of the desert to each episode guiding viewers
                 through the grit, speed, and spirit of <i>Perilous</i>.
               </p>
             </div>
 
             <Image
-              src="https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Talent/rat_sult_v2.png"
-              alt="Rat Sult"
+              src="https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Talent/rat_sult_v3.png"
+              alt="Rat Sult's headshot"
               width={200}
               height={200}
               className="rounded-full border border-white/20 shadow-lg flex-shrink-0"
