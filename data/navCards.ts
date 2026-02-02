@@ -10,7 +10,7 @@ export const navCards: NavCard[] = [
     title: 'Celebrity Contestants',
     href: '/celebrity-contestants',
     blurb: 'The Roster',
-    description: 'Meet the stars brave enough to take on the Baja 1000.',
+    description: 'Meet the stars brave enough to take on Baja.',
   },
   {
     title: 'Racing Legends',

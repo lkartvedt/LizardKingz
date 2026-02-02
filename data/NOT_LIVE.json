@@ -1,8 +1,18 @@
 [
-  {
+    {
     "name": "Frankie Muniz",
     "title": "Actor / Racer Car Driver",
     "bio": "Muniz captured hearts as the lead in the hit sitcom Malcolm in the Middle, earning Emmy and Golden Globe nominations for his performance. Later, he pivoted full-throttle into race car driving fueling his passion for speed and competition. In Perilous, Muniz will bring his passion to the rugged and unforgiving Baja terrain, proving his versatility both on screen and behind the wheel.",
     "image": "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Celebrity%20Contestants/frankie_muniz.png"
-  }
+    }
+]
+ 
+[
+    {
+        "title": "The SCORE Baja 1000",
+        "date": "Nov 10th - 16th, 2025",
+        "location": "Ensenada, Baja California, Mexico",
+        "details": "Come support reigning class champs Ricky Johnson & Gus Vildósola as they race Trophy Truck Legends #1L. We're staying with our hospitality parnter Estero Beach Hotel and Resort, and we'll be at contingency hanging out with a few of our celebrity contestants and guest drivers like Cowboy Cerrone, The Matlocks, & Eva Star. Be sure to say hello!",
+        "merch": "Free stickers"
+    }
 ]
