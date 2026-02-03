@@ -17,7 +17,7 @@ export const navCards: NavCard[] = [
     href: '/legends',
     blurb: 'The Legends',
     description:
-      "Champions mentors and rival guest drivers who get hands-on mentoring their teams.",
+      "Champion mentors and rival guest drivers who get hands-on coaching the teams.",
   },
   {
     title: 'Creators',

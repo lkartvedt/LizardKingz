@@ -146,8 +146,7 @@ export default function HomePage() {
       {/* Tagline */}
       <div className="text-center mt-4">
         <p className="text-lg md:text-xl text-white/90 italic tracking-wide">
-          The World's First Adventure Series Inside Elite{' '}
-          <span className="text-brand font-semibold not-italic">Off-Road&nbsp;Racing</span>
+          The World's First Competition Adventure Series To Turn Pro
         </p>
       </div>
 
