@@ -80,7 +80,7 @@ export default function HomePage() {
           <video
             ref={videoRef}
             className="w-full h-full object-cover rounded-2xl"
-            src="https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Teaser/perilous_trailer_v5.mov"
+            src="https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Teaser/perilous_trailer_v6.mov"
             autoPlay
             muted={muted}          // controlled: we try sound-on first, fallback sets this true
             playsInline
