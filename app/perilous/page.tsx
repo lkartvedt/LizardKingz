@@ -74,7 +74,7 @@ export default async function PerilousPage() {
             </div>
 
             <Image
-              src="https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Talent/rat_sult_v3.png"
+              src="https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Talent/rat_sult_v4.png"
               alt="Rat Sult's headshot"
               width={200}
               height={200}
