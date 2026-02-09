@@ -144,11 +144,25 @@ export default function HomePage() {
       </div>
 
       {/* Tagline */}
-      <div className="text-center mt-4">
-        <p className="text-lg md:text-xl text-white/90 italic tracking-wide">
-          The World's First Competition Adventure Series To Turn Pro
+      <blockquote className="mt-6 text-white/90">
+        {/* Quote */}
+        <p className="text-lg md:text-xl italic tracking-wide text-center">
+          “<span className="text-brand font-semibold">Perilous</span> is the greatest idea in 50 years of off-road racing.”
         </p>
-      </div>
+
+        {/* Attribution */}
+        <footer className="mt-4 flex justify-end pr-6 md:pr-10">
+          <div className="w-2/3 max-w-md text-center">
+            <p className="text-base md:text-lg font-semibold not-italic">
+              — Sal Fish
+            </p>
+            <p className="text-sm md:text-base text-white/70">
+              Former publisher of <em>Hot Rod Magazine</em>,<br />
+              The Godfather of Baja, 2006 ORMHoF inductee
+            </p>
+          </div>
+        </footer>
+      </blockquote>
 
       {/* Meet the Cast/Crew */}
       <section className="pt-2">
