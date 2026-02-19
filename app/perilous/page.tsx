@@ -73,10 +73,6 @@ export default async function PerilousPage() {
                 Casting Style: Jeff Probst, Will Buxton
               </h3>
 
-              <p className="text-xs text-white/50 mt-1">
-                (Individuals referenced are not affiliated with the series.)
-              </p>
-
               <p className="text-white/80 mt-6 leading-relaxed">
                 <i>Perilous</i> is designed as a primetime, unscripted flagship in the broadcast 
                 network and premium streaming space. Our casting style reflects that vision, 
