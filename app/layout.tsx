@@ -16,6 +16,12 @@ export const metadata: Metadata = {
   },
 }
 
+const display = Bebas_Neue({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-bebas',
+})
+
 const Nav = () => (
   <header className="border-b border-white/10 sticky top-0 z-50 backdrop-blur bg-black/30">
     <nav className="container py-4 flex items-center gap-6">
