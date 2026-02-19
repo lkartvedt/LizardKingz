@@ -144,25 +144,35 @@ export default function HomePage() {
       </div>
 
       {/* Tagline */}
-      <blockquote className="mt-6 text-white/90">
-        {/* Quote */}
-        <p className="text-lg md:text-xl italic tracking-wide text-center">
-          “<span className="text-brand font-semibold">Perilous</span> is the greatest idea in 50 years of off-road racing.”
-        </p>
+      <section className="mt-12 max-w-[1400px] mx-auto px-4">
+        <blockquote className="text-center">
 
-        {/* Attribution */}
-        <footer className="mt-4 flex justify-end pr-6 md:pr-10">
-          <div className="w-2/3 max-w-md text-center">
-            <p className="text-base md:text-lg font-semibold not-italic">
+          {/* Quote */}
+          <p className="quote-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] tracking-normal text-white">
+            “<span className="text-brand italic">Perilous</span><span className="text-black">-</span>is the greatest idea in 50 years of off-road racing.”
+          </p>
+
+          {/* Attribution */}
+          <footer className="mt-10 max-w-4xl mx-auto text-center">
+
+            <p className="text-4xl md:text-5xl font-semibold text-white tracking-wide">
               — Sal Fish
             </p>
-            <p className="text-sm md:text-base text-white/70">
-              Former publisher of <em>Hot Rod Magazine</em>,<br />
-              The Godfather of Baja, 2006 ORMHoF inductee
+
+            {/* <p className="mt-2 text-base md:text-lg text-white/70 leading-relaxed"> */}
+            <p className="mt-2 text-lg md:text-xl text-white/70 leading-relaxed">
+
+              Former publisher of <em>Hot Rod Magazine</em> ·  
+              The Godfather of Baja ·  
+              2006 ORMHoF inductee
             </p>
-          </div>
-        </footer>
-      </blockquote>
+
+          </footer>
+
+
+        </blockquote>
+      </section>
+
 
       {/* Meet the Cast/Crew */}
       <section className="pt-2">

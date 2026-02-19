@@ -62,22 +62,36 @@ export default async function PerilousPage() {
           </div>
 
           {/* Hosted By */}
-          <div className="mt-8 flex items-center justify-end gap-6">
+          <div className="mt-10 flex items-center justify-end gap-6">
             <div className="text-right flex-1 max-w-none pr-4">
-              <h2 className="text-2xl font-semibold text-white/90 tracking-wide">Hosted By</h2>
-              <h3 className="text-xl font-semibold text-white mt-1">Rat Sult</h3>
-              <p className="text-white/70 mt-2 max-w-none">
-                Veteran off-road announcer and X Games gold medalist, Rat Sult, 
-                brings the heart of the desert to each episode guiding viewers
-                through the grit, speed, and spirit of <i>Perilous</i>.
+
+              <h2 className="text-2xl md:text-3xl font-semibold text-white tracking-wide">
+                HOST – To Be Announced
+              </h2>
+
+              <h3 className="text-lg md:text-xl text-white/90 mt-2">
+                Casting Style: Jeff Probst, Will Buxton
+              </h3>
+
+              <p className="text-xs text-white/50 mt-1">
+                (Individuals referenced are not affiliated with the series.)
               </p>
+
+              <p className="text-white/80 mt-6 leading-relaxed">
+                <i>Perilous</i> is designed as a primetime, unscripted flagship in the broadcast 
+                network and premium streaming space. Our casting style reflects that vision, 
+                from the attached racing legends to the celebrity contestants and the series 
+                host we will cast for the recognition and credibility expected of a 
+                broadcast-scale series.
+              </p>
+
             </div>
 
             <Image
-              src="https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Talent/rat_sult_v4.png"
-              alt="Rat Sult's headshot"
-              width={200}
-              height={200}
+              src="https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Talent/temp_host.png"
+              alt="AI example image of a Perilous host onsite"
+              width={225}
+              height={225}
               className="rounded-full border border-white/20 shadow-lg flex-shrink-0"
             />
           </div>
