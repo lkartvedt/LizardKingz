@@ -29,22 +29,22 @@ export default async function PerilousPage() {
           width={500}
           height={500}
           //className="w-64 md:w-96 h-auto"
-          className="w-72 md:w-[28rem] h-auto"
+          className="w-48 md:w-[18rem] h-auto"
           priority
         />
 
         <div className="flex-1">
           <p className="text-white/100 max-w-2xl mt-2">
             <b>
-              Twelve celebrities train to compete in the world's most famous off-road race.
-              The final episode is a historic television first when they face off against each
-              other and the best in the business, at its most iconic event.
-            </b>
+              Twelve celebrities train to compete in the world's most famous off-road race. 
+              In a historic television first, contestants face off against each other and the 
+              best in the business.
+              </b>
           </p>
           <p className="text-white/80 max-w-2xl mt-2">
-            Follow our celebrity contestants as they take on the deserts of Baja, 
-            from Ensenada to Cabo San Lucas. Training and competing under the guidance of 
-            three off-road legends and a host of elite guest drivers.
+            Follow our celebrity contestants as they take on the deserts of Baja. 
+            From Ensenada to Cabo San Lucas, they will train and compete under the guidance 
+            of three off-road legends & a host of elite guest drivers.
           </p>
 
           <div className="mt-3 flex gap-3 text-sm flex-wrap">
@@ -60,39 +60,49 @@ export default async function PerilousPage() {
               Meet the Baja Celebrity Contestants
             </Link>
           </div>
-
-          {/* Hosted By */}
-          <div className="mt-10 flex items-center justify-end gap-6">
-            <div className="text-right flex-1 max-w-none pr-4">
-
-              <h2 className="text-2xl md:text-3xl font-semibold text-white tracking-wide">
-                HOST – To Be Announced
-              </h2>
-
-              <h3 className="text-lg md:text-xl text-white/90 mt-2">
-                Casting Style: Jeff Probst, Will Buxton
-              </h3>
-
-              <p className="text-white/80 mt-6 leading-relaxed">
-                <i>Perilous</i> is designed as a primetime, unscripted flagship in the broadcast 
-                network and premium streaming space. Our casting style reflects that vision, 
-                from the attached racing legends to the celebrity contestants and the series 
-                host we will cast for the recognition and credibility expected of a 
-                broadcast-scale series.
-              </p>
-
-            </div>
-
-            <Image
-              src="https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Headshots/Talent/temp_host.png"
-              alt="AI example image of a Perilous host onsite"
-              width={225}
-              height={225}
-              className="rounded-full border border-white/20 shadow-lg flex-shrink-0"
-            />
-          </div>
         </div>
       </header>
+
+      {/* Host Casting Style Section */}
+      <section className="pt-2 space-y-6">
+        {/* Quote */}
+        {/* <p className="quote-display w-full text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-[1.1] text-white text-justify">
+          <span className="text-brand">HOST CASTING STYLE:</span>{' '}
+          A broadcast-scale personality with the authority,
+          credibility, and charisma of Jeff Probst, Jeremy Clarkson, or Mike Rowe.
+        </p> */}
+
+        <p className="quote-display w-full text-[1rem] sm:text-[1.3rem] md:text-[1.8rem] lg:text-[2.3rem] xl:text-[2.8rem] leading-snug text-white text-justify [text-align-last:justify]">
+          <span className="text-brand">HOST CASTING STYLE:</span>{' '}
+          A broadcast-scale personality with the authority, credibility, and charisma
+          of a Jeff Probst, Jeremy Clarkson, or Mike Rowe.
+        </p>
+
+      {/* Silhouette image with overlay card */}
+        <div className="relative overflow-hidden rounded-2xl border border-white/10">
+          {/* Image */}
+          <div className="relative w-full">
+            <Image
+              src="https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Pages/casting_style_silhouette_desert.png"
+              alt="Host casting style silhouette"
+              width={1333}
+              height={786}
+              className="w-full h-auto object-cover"
+              priority
+            />
+          </div>
+
+          {/* Bottom-left overlay */}
+          <div className="absolute bottom-10 left-10">
+            <p className="max-w-sm text-white text-base sm:text-xl md:text-2xl leading-relaxed">
+              <i><b>Perilous</b></i> is designed as a primetime, unscripted flagship in the 
+              broadcast network and premium streaming space. Our casting style reflects that vision, 
+              from the attached racing legends to the celebrity contestants and series host we'll cast 
+              for the recognition and credibility expected of a broadcast-scale series.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Meet the Cast/Crew NavCards Section */}
       <section className="pt-2">
