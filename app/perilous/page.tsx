@@ -97,7 +97,7 @@ export default async function PerilousPage() {
             <p className="max-w-sm text-white text-base sm:text-xl md:text-2xl leading-relaxed">
               <i><b>Perilous</b></i> is designed as a primetime, unscripted flagship in the 
               broadcast network and premium streaming space. Our casting style reflects that vision, 
-              from the attached racing legends to the celebrity contestants and series host we'll cast 
+              from the attached racing legends to the celebrity contestants and series host, we'll cast 
               for the recognition and credibility expected of a broadcast-scale series.
             </p>
           </div>
