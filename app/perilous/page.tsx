@@ -22,14 +22,13 @@ export default async function PerilousPage() {
   return (
     <article className="space-y-6 md:space-y-10">
       {/* Header */}
-      <header className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+      <header className="flex flex-col md:flex-row items-center gap-2 md:gap-10">
         <Image
           src="/img/perilous_logo.png"
           alt="Perilous logo"
           width={500}
           height={500}
-          //className="w-64 md:w-96 h-auto"
-          className="w-48 md:w-[18rem] h-auto"
+          className="w-72 md:w-[18rem] h-auto"
           priority
         />
 
