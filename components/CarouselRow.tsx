@@ -11,7 +11,6 @@ export default function CarouselRow({ images }: { images: string[] }) {
   const prev = () => setIndex(i => (i - 1 + total) % total)
   const next = () => setIndex(i => (i + 1) % total)
 
-  // Compute the 3 images to show, looping seamlessly
   const visibleImages = [
     images[index],
     images[(index + 1) % total],
@@ -20,7 +19,6 @@ export default function CarouselRow({ images }: { images: string[] }) {
 
   return (
     <div className="relative">
-      {/* Frame */}
       <div className="overflow-hidden rounded-2xl border border-white/10">
         <div className="flex transition-transform duration-500 ease-in-out">
           {visibleImages.map((src, i) => (
@@ -41,7 +39,6 @@ export default function CarouselRow({ images }: { images: string[] }) {
         </div>
       </div>
 
-      {/* Arrows */}
       <button
         onClick={prev}
         aria-label="Previous"

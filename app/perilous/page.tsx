@@ -72,7 +72,7 @@ export default async function PerilousPage() {
           credibility, and charisma of Jeff Probst, Jeremy Clarkson, or Mike Rowe.
         </p> */}
 
-        <p className="quote-display w-full text-[1rem] sm:text-[1.3rem] md:text-[1.8rem] lg:text-[2.3rem] xl:text-[2.8rem] leading-snug text-white text-justify [text-align-last:justify]">
+        <p className="quote-display w-full text-[1rem] sm:text-[1.3rem] md:text-[1.8rem] lg:text-[2.3rem] xl:text-[2.8rem] leading-snug text-white text-center sm:text-justify sm:[text-align-last:justify]">
           <span className="text-brand">HOST CASTING STYLE:</span>{' '}
           A broadcast-scale personality with the authority, credibility, and charisma
           of a Jeff Probst, Jeremy Clarkson, or Mike Rowe.
@@ -80,7 +80,6 @@ export default async function PerilousPage() {
 
       {/* Silhouette image with overlay card */}
         <div className="relative overflow-hidden rounded-2xl border border-white/10">
-          {/* Image */}
           <div className="relative w-full">
             <Image
               src="https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Pages/casting_style_silhouette_desert.png"
@@ -92,16 +91,24 @@ export default async function PerilousPage() {
             />
           </div>
 
-          {/* Bottom-left overlay */}
-          <div className="absolute bottom-10 left-10">
-            <p className="max-w-sm text-white text-base sm:text-xl md:text-2xl leading-relaxed">
-              <i><b>Perilous</b></i> is designed as a primetime, unscripted flagship in the 
-              broadcast network and premium streaming space. Our casting style reflects that vision, 
-              from the attached racing legends to the celebrity contestants and series host, we'll cast 
+          {/* Bottom-left overlay — desktop only */}
+          <div className="hidden sm:block absolute bottom-10 left-10">
+            <p className="max-w-sm text-white text-base md:text-xl lg:text-2xl leading-relaxed">
+              <i><b>Perilous</b></i> is designed as a primetime, unscripted flagship in the
+              broadcast network and premium streaming space. Our casting style reflects that vision,
+              from the attached racing legends to the celebrity contestants and series host, we'll cast
               for the recognition and credibility expected of a broadcast-scale series.
             </p>
           </div>
         </div>
+
+        {/* Same text below image on mobile */}
+        <p className="sm:hidden text-white/80 text-sm leading-relaxed">
+          <i><b>Perilous</b></i> is designed as a primetime, unscripted flagship in the
+          broadcast network and premium streaming space. Our casting style reflects that vision,
+          from the attached racing legends to the celebrity contestants and series host, we'll cast
+          for the recognition and credibility expected of a broadcast-scale series.
+        </p>
       </section>
 
       {/* Meet the Cast/Crew NavCards Section */}
