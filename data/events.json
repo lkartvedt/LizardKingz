@@ -1,19 +1,37 @@
 [
   {
+    "title": "Off-Road Nights Expo Autograph Session",
+    "date": "Jun 27th, 2026",
+    "dateISO": "2026-06-27",
+    "location": "The Promenade, Temecula, CA",
+    "details": "Meet the Perilous cast at an exclusive autograph session during the Off-Road Nights Expo!",
+    "images": [
+      "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Events/OffRoadNightExpoAutographSession/RS.png",
+      "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Events/OffRoadNightExpoAutographSession/CL.png",
+      "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Events/OffRoadNightExpoAutographSession/RJ.png",
+      "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Events/OffRoadNightExpoAutographSession/MP.png",
+      "https://hb6ybfjjgf6kkdcu.public.blob.vercel-storage.com/Events/OffRoadNightExpoAutographSession/ES.png"
+    ],
+    "extraDetails": "You can catch  Rat Sult, Curt LeDuc, Ricky Johnson, Mark Post, and special guest Eva Star at the Speed UTV Booth from 3:00 - 3:30 PM."
+  },
+  {
     "title": "Off-Road Motorsports Hall of Fame Induction Ceremony",
     "date": "Nov 2nd, 2025",
+    "dateISO": "2025-11-02",
     "location": "South Point Hotel and Casino, Las Vegas, Nevada",
     "details": "The team enjoyed the evening's program and connected with off-road icons, including Rick Geiser, Evan Evans, The Weatherman & family, Nichole Johnson, and Baja Nikki. Mikal (Perilous creator) also reunited with Baja legend Sal Fish, a valued supporter of Perilous."
   },
   {
     "title": "SEMA Convention",
     "date": "Nov 3rd - 6th, 2025",
+    "dateISO": "2025-11-03",
     "location": "Las Vegas Convention Center, Las Vegas, Nevada",
     "details": "The team pitched Perilous to NEXEN Tires, VP Fuels, WD-40, FUEL Off-Road (wheels), Toyota, Honda, Nissan, and others, and attatched actor Robert Ri'chard to the roster. Sneak peak: We met with Ivan 'Ironman' Stewart, Terry Madden & the Block family... more news about their involvement soon!"
   },
   {
     "title": "Race for Hope",
     "date": "Oct 18th, 2025 - 9:00 AM",
+    "dateISO": "2025-10-18",
     "location": "Estero Beach Hotel & Resort, Ensenada, Mexico",
     "details": "Come to the benefit for Mi Casa de Esperanza and several other orphanages. All donations appreciated!",
     "merch": "Free stickers"

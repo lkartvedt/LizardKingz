@@ -36,9 +36,9 @@ export default async function PerilousPage() {
         <div className="flex-1">
           <p className="text-white/100 max-w-2xl mt-2">
             <b>
-              Twelve celebrities train to compete in the world's most famous off-road race. 
-              In a historic television first, contestants face off against each other and the 
-              best in the business.
+              Twelve celebrity contestants train to compete in NORRA&apos;s BAJA, the world-famous
+              off-road grand prix of the Mexican Peninsula. In a first-of-its-kind season finale,
+              contestants face off against each other and the best in the business.
               </b>
           </p>
           <p className="text-white/80 max-w-2xl mt-2">
