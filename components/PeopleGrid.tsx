@@ -18,9 +18,9 @@ export default function PeopleGrid({
         <div className="card flex flex-col justify-between items-center text-center mx-auto w-full max-w-[920px] min-h-[260px] p-4" key={p.name}>
           {/* Top section: photo + info */}
           <div>
-            <div className="flex items-center gap-4">
-              <Image src={p.image} alt={p.name} width={240} height={240} className="avatar" />
-              <div>
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <Image src={p.image} alt={p.name} width={240} height={240} className="avatar shrink-0" />
+              <div className="text-center sm:text-left">
                 <div className="text-lg font-semibold uppercase tracking-wide text-white/90">{p.name}</div>
                 <div className="text-white/70">{p.title}</div>
               </div>
