@@ -5,6 +5,7 @@ import Image from 'next/image'
 import events from '@/data/events.json'
 import NavCardGrid from '@/components/NavCardGrid'
 import { navCards } from '@/data/navCards'
+import EventModal from '@/components/EventModal'
 
 export default function HomePage() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -15,6 +16,7 @@ export default function HomePage() {
   const [needsUnmutePrompt, setNeedsUnmutePrompt] = useState(false) // shown only if fallback happens
   const [eventIndex, setEventIndex] = useState(0)
   const visibleEvents = events.slice(eventIndex, eventIndex + 3)
+  const [selectedEvent, setSelectedEvent] = useState<typeof events[0] | null>(null)
 
   // Try autoplay WITH sound, fallback to muted if blocked
   useEffect(() => {
@@ -179,7 +181,7 @@ export default function HomePage() {
 
       {/* Brand Partners */}
       <section className="py-4 space-y-6 text-center">
-        <h3 className="text-brand">Thanks to our Brand Partners</h3>
+        <h3 className="text-brand">Special thanks to our Brand Partners</h3>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
           {[
             { name: 'NORRA',        file: 'norra_logo',        href: 'https://www.norra.com/' },
@@ -209,24 +211,37 @@ export default function HomePage() {
 
       {/* Events */}
       <div className="space-y-4">
-        <h2 className="text-brand">Upcoming & Recent Events</h2>
+        <h2 className="text-brand">Upcoming Events</h2>
 
         <div className="relative px-8">
           <div className="grid-cards">
-            {visibleEvents.map((ev) => (
-              <div className="card" key={ev.title}>
-                <h3>{ev.title}</h3>
-                <div className="text-white/70 mt-1">
-                  {ev.date} — {ev.location}
-                </div>
-                <p className="text-white/80 mt-2">{ev.details}</p>
-                {ev.merch && (
-                  <div className="mt-3 text-sm">
-                    Merch: <span className="text-brand">{ev.merch}</span>
+            {visibleEvents.map((ev) => {
+              const isPast = new Date(ev.dateISO) < new Date()
+              return (
+                <div className={`card flex flex-col ${isPast ? 'opacity-40 grayscale' : ''}`} key={ev.title}>
+                  <h3>{ev.title}</h3>
+                  <div className="text-white/70 mt-1">
+                    {ev.date} — {ev.location}
                   </div>
-                )}
-              </div>
-            ))}
+                  <p className="text-white/80 mt-2">{ev.details}</p>
+                  {ev.merch && (
+                    <div className="mt-3 text-sm">
+                      Merch: <span className="text-brand">{ev.merch}</span>
+                    </div>
+                  )}
+                  {(ev.images || ev.extraDetails) && (
+                    <div className="mt-4 pt-3 border-t border-white/10">
+                      <button
+                        className="btn-orange text-sm"
+                        onClick={() => setSelectedEvent(ev)}
+                      >
+                        More Details
+                      </button>
+                    </div>
+                  )}
+                </div>
+              )
+            })}
           </div>
 
           {events.length > 3 && eventIndex > 0 && (
@@ -264,6 +279,10 @@ export default function HomePage() {
           </div>
         )}
       </div>
+
+      {selectedEvent && (
+        <EventModal event={selectedEvent} onClose={() => setSelectedEvent(null)} />
+      )}
     </section>
   )
 }
