@@ -1,7 +1,12 @@
+@import 'plyr/dist/plyr.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root { color-scheme: dark; }
+:root {
+  color-scheme: dark;
+  --plyr-color-main: #FF7C26;
+  --plyr-video-background: #0B0D0F;
+}
 html, body { background:#0B0D0F; color:#fff; }
 .container { @apply max-w-6xl mx-auto px-4; }
 .card { @apply bg-white/5 rounded-2xl p-6 shadow-lg border border-white/10; }
