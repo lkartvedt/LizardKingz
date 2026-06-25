@@ -38,6 +38,8 @@ export default function ContactPage() {
         <p className="text-white/80">Get in touch with the Lizard Kingz team.</p>
 
         <form onSubmit={handleSubmit} className="card space-y-4 text-left">
+          {/* Honeypot — hidden from humans, bots fill it in */}
+          <input name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="!hidden" />
           <div className="grid md:grid-cols-2 gap-4">
             <input required name="name" placeholder="Your name" className="w-full" />
             <input required type="email" name="email" placeholder="Your email" className="w-full" />

@@ -3,7 +3,10 @@ import { Resend } from 'resend'
 
 export async function POST(req: Request) {
   try {
-    const { name, email, subject, message } = await req.json()
+    const { name, email, subject, message, website } = await req.json()
+
+    // Honeypot: bots fill hidden fields, humans don't
+    if (website) return NextResponse.json({ success: true })
 
     const apiKey = process.env.RESEND_API_KEY
     if (!apiKey) {
