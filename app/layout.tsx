@@ -13,6 +13,10 @@ export const metadata: Metadata = {
     description: 'Desert racing show',
     type: 'website',
   },
+  icons: {
+    icon: '/img/icon.png',
+    apple: '/img/icon.png',
+  },
 }
 
 const display = Bebas_Neue({
